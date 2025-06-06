@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Fee Paid Main</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg'); /* Add the background image */
+    background-size: cover;
+}
+.main-content {
+    flex: 1;
+    padding: 20px;
+    height: 105vh;
+    background: rgba(255, 165, 0, 0.9);
+    color: black;
+    text-align: center;
+}
+.content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .form-container {
+            background: orange;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+       
+        .form-container input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+h1 {
+    background: yellow;
+    padding: 10px;
+}
+   .container {
+            width: 100%;
+            margin: auto;
+             height: 115vh;
+            display: flex;}
+.sidebar {
+    width: 250px;
+         background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20240430/pngtree-orange-light-background-image_15722879.jpg');
+    padding: 15px;
+    height: 105vh;
+    color: white;
+}
+.sidebar h2 {
+            font-size: 18px;
+            color: black;
+            text-align: center;
+            background-color: #ff6600;
+            padding: 10px;
+            margin-bottom: 15px;
+        }.sidebar button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 16px;
+            border: none;
+            background-color: #ffcc80;
+            cursor: pointer;
+            text-align: left;
+        }
+  .sidebar button:hover {
+            background-color: #d2691e;
+            color: white;
+}
+.sidebar {
+            width: 250px;
+            background-color: #e08e3d;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+}
+.menu {
+    list-style: none;
+    padding: 0;
+}
+.menu li {
+    margin: 10px 0;
+}
+.menu a {
+    display: block;
+    padding: 10px;
+    background: #ffc77d;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.menu a:hover {
+    background: #ffb347;
+}
+
+
+.students-section {
+    margin-top: 20px;
+    background: #ff9900;
+    padding: 15px;
+    text-align:center;
+    border-radius: 5px;
+}
+.students-section h2 {
+    color: white;
+}
+
+table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: Center;
+}
+</style>
+
+    <div class="container">
+        <div class="sidebar">
+           <h2>HOSTEL INFORMATION</h2>
+            <button><i class="fa-solid fa-house"></i> Manage Rooms</button>
+            <button><i class="fa-solid fa-user-plus"></i> New Students</button>
+            <button><i class="fa-solid fa-users-gear"></i> Update Delete Students</button>
+            <button><i class="fa-solid fa-coins"></i> Student Fees</button>
+            <button><i class="fa-solid fa-bed"></i> All Student Living</button>
+            <button><i class="fa-solid fa-user-minus"></i>Leaved Students</button>
+            <button><i class='fas fa-user-tie'></i> New Employee</button>
+            <button><i class="fa-solid fa-user-xmark"></i>Update Del Employee</button>
+            <button>Employee Payment</button>
+            <button>All Employee Working</button>
+            <button><i class='fas fa-user-tie'></i> Leaved Employee</button>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <h1>HOSTAL MANAGEMENT SYSTEM</h1>
+            </div>
+            <div class="content">
+                <div class="form-container">
+                    <label>Mobile Number</label>
+                    <input type="number" id="cnumber" name="cnumber" required>
+                    <button>Search</button>
+                    
+                    <label>Name</label>
+                   <input type="text" id="cname" name="cname" required>
+    
+                    <label>Email ID</label>
+                    <input type="email" id="cemail" name="cemail" required>
+    
+                    <label>Room Number</label>
+                    <input type="number" id="cnumber" name="cnumber" required>
+    
+                    <label for="checkout">From the Date:</label>
+                    <input type="date" id="checkout" name="checkout" required>
+
+                    <label for="checkout">To The Date:</label>
+                    <input type="date" id="checkout" name="checkout" required>
+    
+                    <label>Amount Payed</label>
+                    <input type="number" id="cnumber" name="cnumber" required>
+    
+                    <div class="btn-container">
+                        <button class="pay">Pay</button>
+                        <button class="clear">Clear</button>
+                    </div>
+                    
+                 <table>
+                    <tr>
+                        <th>Mobile No</th>
+                        <th>Month</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr>
+                        <td>7020572471</td>
+                        <td>March 2025</td>
+                        <td>1400.00</td>
+                    </tr>
+                 </table>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
