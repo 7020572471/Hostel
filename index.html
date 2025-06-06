@@ -136,24 +136,9 @@
       right: 0;
       transform: translateX(0);
     }
-    #profile {
-      display: none;
-      text-align: center;
-    }
-    #profile h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
   </style>
 </head>
 <body>
-
-  <!-- Profile Page -->
-  <div id="profile">
-    <h2>Welcome, <span id="username"></span>!</h2>
-    <button onclick="logout()">Log Out</button>
-  </div>
-
   <!-- Auth Container -->
   <div class="container" id="container">
     <div class="form-container sign-up-container">
@@ -233,12 +218,7 @@
         alert("Invalid credentials!");
       }
     });
-
-    // Logout
-    function logout() {
-      document.getElementById("profile").style.display = "none";
-      container.style.display = "block";
-    }
+    
   </script>
 </body>
 </html>
