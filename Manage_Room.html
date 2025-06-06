@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hostel Management System - Manage Room</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('hostel-bg.jpg') no-repeat center center/cover;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20240430/pngtree-orange-light-background-image_15722879.jpg');
+    padding: 15px;
+    height: 100vh;
+    color: white;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    background-color: #ff6600;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.sidebar {
+    background-color: #e08e3d;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 16px;
+    border: none;
+    background-color: #ffcc80;
+    cursor: pointer;
+    text-align: left;
+}
+
+.sidebar button:hover {
+    background-color: #d2691e;
+    color: white;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background: rgba(255, 165, 0, 0.9);
+    color: black;
+    text-align: center;
+}
+
+h1 {
+    background: yellow;
+    padding: 10px;
+}
+
+.room-section {
+    margin: 20px 0;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.room-section h3 {
+    margin: 0;
+}
+
+input, select {
+    padding: 5px;
+    margin: 5px;
+}
+
+.btn {
+    background: green;
+    color: white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn.delete {
+    background: red;
+}
+
+table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+</style>
+
+<div class="container">
+    <div class="sidebar">
+        <h2>HOSTEL INFORMATION</h2>
+        <button onclick="document.location='Manage_Room.html'"><i class="fa-solid fa-house"></i> Manage Rooms</button>
+        <button onclick="document.location='new_student.html'"><i class="fa-solid fa-user-plus"></i> New Students</button>
+        <button onclick="document.location='studfee.html'"><i class="fa-solid fa-coins"></i> Student Fees</button>
+        <button onclick="document.location='All_student_aLive.html'"><i class="fa-solid fa-bed"></i> All Student Living</button>
+        <button onclick="document.location='leved_student.html'"><i class="fa-solid fa-user-minus"></i>Leaved Students</button>
+        <button onclick="document.location='new_employ.html'"><i class='fas fa-user-tie'></i> New Employee</button>
+        <button onclick="document.location='Employe_update.html'"><i class="fa-solid fa-users-gear"></i> Update Delete Employee</button>    
+        <button onclick="document.location='Employe_Fee_Payment.html'"><i class="fa-thin fa-coin-blank"></i>Employee Payment</button>
+        <button onclick="document.location='All_employe_live.html'"></buttononclick> <i class="fa-solid fa-users"></i>All Employee Working</button>
+        <button onclick="document.location='leved_employe.html'"><i class='fas fa-user-tie'></i> Leaved Employee</button>
+        <button onclick="document.location='contactus.html'"><i class="fa-solid fa-phone"></i></i>Contact Us </button>
+    </div>
+
+    <div class="main-content">
+        <h1>HOSTEL MANAGEMENT SYSTEM</h1>
+
+        <div class="room-section">
+            <h3>ADD NEW ROOM</h3>
+            <label>Room Number:
+                <select id="newRoomNumber" required>
+                    <option value="">Select Room</option>
+                    <option value="A11">A11</option>
+                    <option value="A12">A12</option>
+                    <option value="A13">A13</option>
+                    <option value="A14">A14</option>
+                    <option value="A15">A15</option>
+                    <option value="A13">A16</option>
+                </select>
+            </label>
+            <label><input type="checkbox" id="newRoomStatus"> Active </label>
+            <label><input type="checkbox" id="n">  Not Active </label>
+            <button class="btn" id="addRoomBtn">ADD ROOM</button>
+        </div>
+
+        <div class="room-section">
+            <h3>UPDATE OR DELETE ROOMS</h3>
+            <label>Room Number: <input type="text" id="updateRoom" required></label>
+            <button class="btn" id="searchBtn">SEARCH</button>
+            <label><input type="checkbox" id="statusCheckbox"> Activate OR Deactivate</label>
+            <button class="btn" id="updateBtn">UPDATE</button>
+            <button class="btn delete" id="deleteBtn">DELETE</button>
+        </div>
+
+        <h2>ALL ROOMS</h2>
+        <table class="scrolldown" id="roomTable">
+            <thead>
+                <tr>
+                    <th>Room No</th>
+                    <th>Status</th>
+                    <th>Booked</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+let rooms = [
+    { number: 'B11', status: true, booked: true },
+    { number: 'B12', status: true, booked: true },
+    { number: 'B13', status: true, booked: false },
+    { number: 'B14', status: false, booked: false },
+    { number: 'B15', status: true, booked: false }
+];
+
+const updateRoomInput = document.getElementById("updateRoom");
+const statusCheckbox = document.getElementById("statusCheckbox");
+const searchBtn = document.getElementById("searchBtn");
+const updateBtn = document.getElementById("updateBtn");
+const deleteBtn = document.getElementById("deleteBtn");
+const tableBody = document.querySelector("tbody");
+
+// Add Room Inputs
+const newRoomNumberSelect = document.getElementById("newRoomNumber");
+const newRoomStatus = document.getElementById("newRoomStatus");
+const addRoomBtn = document.getElementById("addRoomBtn");
+
+function renderRoomTable() {
+    tableBody.innerHTML = "";
+    rooms.forEach(room => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${room.number}</td>
+            <td>${room.status ? "Yes" : "No"}</td>
+            <td>${room.booked ? "Yes" : "No"}</td>
+        `;
+        tableBody.appendChild(row);
+    });
+}
+
+// SEARCH
+searchBtn.addEventListener("click", () => {
+    const roomNum = updateRoomInput.value; // Keep it as string for comparison
+    const room = rooms.find(r => r.number === roomNum);
+    if (room) {
+        statusCheckbox.checked = room.status;
+        alert(`Room ${roomNum} found. Status: ${room.status ? 'Active' : 'Inactive'}`);
+    } else {
+        alert("Room Number not found.");
+    }
+});
+
+// UPDATE
+updateBtn.addEventListener("click", () => {
+    const roomNum = updateRoomInput.value; // Keep it as string
+    const room = rooms.find(r => r.number === roomNum);
+    if (room) {
+        room.status = statusCheckbox.checked;
+        alert(`Room ${roomNum} updated.`);
+        renderRoomTable();
+    } else {
+        alert("Room Number not found.");
+    }
+});
+
+// DELETE
+deleteBtn.addEventListener("click", () => {
+    const roomNum = updateRoomInput.value; // Keep it as string
+    const index = rooms.findIndex(r => r.number === roomNum);
+    if (index !== -1) {
+        if (confirm(`Delete room ${roomNum}?`)) {
+            rooms.splice(index, 1);
+            alert(`Room ${roomNum} deleted.`);
+            renderRoomTable();
+        }
+    } else {
+        alert("Room Number not found.");
+
+    }
+});
+
+// ADD NEW ROOM
+addRoomBtn.addEventListener("click", () => {
+    const roomNum = newRoomNumberSelect.value;
+    if (!roomNum) {
+        alert("Please select a room number.");
+        return;
+    }
+
+    if (rooms.some(r => r.number === roomNum)) {
+        alert(`Room ${roomNum} is already added.`);
+        return;
+    }
+
+    rooms.push({
+        number: roomNum,
+        status: newRoomStatus.checked,
+        booked: false
+    });
+
+    alert(`Room ${roomNum} added.`);
+    newRoomNumberSelect.value = "";
+    newRoomStatus.checked = false;
+    renderRoomTable();
+});
+
+renderRoomTable();
+</script>
+</body>
+</html>
