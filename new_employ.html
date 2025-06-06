@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>New Employed</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('hostel-bg.jpg') no-repeat center center/cover;
+}
+
+.container {
+    display: flex;
+}
+    .sidebar {
+    width: 250px;
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20240430/pngtree-orange-light-background-image_15722879.jpg');
+    padding: 15px;
+    height: 100vh;
+    color: white;
+}
+
+.sidebar h2 {
+            font-size: 18px;
+            color: black;
+            text-align: center;
+            background-color: #ff6600;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+.sidebar {
+        
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20240430/pngtree-orange-light-background-image_15722879.jpg');
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 16px;
+    border: none;
+    background-color: #ffcc80;
+    cursor: pointer;
+    text-align: left;
+}
+.sidebar button:hover {
+            background-color: #d2691e;
+            color: white;
+}
+
+        .form-container {
+            background: orange;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+
+
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background: rgba(255, 165, 0, 0.9);
+    color: black;
+    text-align: center;
+}
+
+h2 {
+    background: yellow;
+    padding: 10px;
+}
+        .content {
+            width: 75%;
+            padding: 20px;
+        }
+
+.room-section {
+    margin: 20px 0;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+.room-section h3 {
+    margin: 0;
+}
+
+input {
+            width: 125%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+        }
+
+.btn {
+    background: green;
+    color: white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+.sidebar button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 16px;
+            border: none;
+            background-color: #ffcc80;
+            cursor: pointer;
+            text-align: left;
+        }
+        .sidebar button:hover {
+            background-color: #d2691e;
+            color: white;
+        }
+
+.btn.delete {
+    background: red;
+}
+
+table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+</style>
+    <<div class="container">
+        <div class="sidebar">
+            <h2>HOSTEL INFORMATION</h2>
+            <button onclick="document.location='Manage_Room.html'"><i class="fa-solid fa-house"></i> Manage Rooms</button>
+            <button onclick="document.location='new_student.html'"><i class="fa-solid fa-user-plus"></i> New Students</button>
+            <button onclick="document.location='studfee.html'"><i class="fa-solid fa-coins"></i> Student Fees</button>
+            <button onclick="document.location='All_student_aLive.html'"><i class="fa-solid fa-bed"></i> All Student Living</button>
+            <button onclick="document.location='leved_student.html'"><i class="fa-solid fa-user-minus"></i>Leaved Students</button>
+            <button onclick="document.location='new_employ.html'"><i class='fas fa-user-tie'></i> New Employee</button>
+            <button onclick="document.location='Employe_update.html'"><i class="fa-solid fa-users-gear"></i> Update Delete Employee</button>    
+            <button onclick="document.location='Employe_Fee_Payment.html'"><i class="fa-thin fa-coin-blank"></i>Employee Payment</button>
+            <button onclick="document.location='All_employe_live.html'"></buttononclick> <i class="fa-solid fa-users"></i>All Employee Working</button>
+            <button onclick="document.location='leved_employe.html'"><i class='fas fa-user-tie'></i> Leaved Employee</button>
+            <button onclick="document.location='contactus.html'"><i class="fa-solid fa-phone"></i></i>Contact Us </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h2> <i class="fa-solid fa-hotel"></i> HOSTEL MANAGEMENT SYSTEM <i class="fa-solid fa-hotel"></i></h2>
+            
+            
+        <div class="content">
+            <div class="form-container">
+             <h1>New Employed Registration</h1>
+                <form>
+                    <label>Mobile Number</label>
+                    <input type="number" id="cnumber" name="cnumber" placeholder="Enter the Mobile Number" required>
+                    <label>Name</label>
+                    <input type="text" id="cname" name="cname" placeholder="Enter The Name">
+                    <label>Father Name</label>
+                    <input type="text" id="cname" name="cname" placeholder="Father Name" required>
+                    <label>Enter Your Age</label>
+                    <input type="number" id="cname" name="cname" placeholder="Enter Your Age in Year" required>
+                    <label>Email ID</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                    <label>Permanent Address</label>
+                    <input type="text" id="cname" name="cname" placeholder="Enter Address">
+                    <label for="checkout">Fron The Date:</label>
+                    <input type="date" id="checkout" name="checkout" required>
+                    <label>Experience Of Work (weeks) </label>
+                    <input type="week" placeholder="Enter The weeks">
+                    <label for="checkout">To The Date:</label>
+                    <input type="date" id="checkout" name="checkout" required>
+                    <label>Aadhar Number</label>
+                    <input type="text"id="cnumber" name="cnumber" placeholder="Enter Aadhar Number" required>
+                    <label for="room">Select Work:</label>
+                    <select id="room" name="room">
+                        <option value="" disabled selected >-- Select work type --</option>
+                        <option value="Manager">Manager</option>
+                        <option value="Swpeer">Swpeer</option>
+                        <option value="House Keeping Staff">House Keeping Staff</option>
+                        <option value="Maintenance Workers">Maintenance Workers</option>
+                        <option value="Cleaner">Cleaner</option>
+                        <option value="Gardener">Gardener</option>
+                    </select>
+                    <div class="buttons">
+                        <button class="save">Save</button>
+                        <button class="clear">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
